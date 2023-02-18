@@ -26,4 +26,27 @@
 
         return isSumLargerOrEqualTo17;
     }
+
+    // If/Else conditional statement
+    public static string IsElseConditionalStatement()
+    {
+        int number = 0;
+
+        string result;
+
+        if (number < 0)
+        {
+            result = "negative";
+        }
+        else if (number > 0)
+        {
+            result = "positive";
+        }
+        else
+        {
+            result = "zero";
+        }
+
+        return result;
+    }
 }
