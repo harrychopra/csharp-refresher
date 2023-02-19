@@ -49,4 +49,17 @@
 
         return result;
     }
+
+    // Methods
+    public static int AbsoluteOfSum(int numA, int numB)
+    {
+        var sum = numA + numB;
+
+        if (sum < 0)
+        {
+            sum *= -1;
+        }
+
+        return sum;
+    }
 }
