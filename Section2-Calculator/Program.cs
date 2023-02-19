@@ -17,27 +17,30 @@ internal class Program
             "[M]ultiply numbers");
         char userChoice = char.Parse(Console.ReadLine());
 
-        switch (userChoice)
+        if (IsEqualCaseInsensitive('A', userChoice))
         {
-            case 'a':
-            case 'A':
-                var sum = numA + numB;
-                PrintEquation(numA, numB, "+",sum);
-                break;
-            case 's':
-            case 'S':
-                var difference = numA - numB;
-                PrintEquation(numA, numB, "-", difference);
-                break;
-            case 'm':
-            case 'M':
-                var product = numA * numB;
-                PrintEquation(numA, numB, "*", product);
-                break;
-            default:
-                Console.WriteLine("Invalid choice!");
-                break;
+            var sum = numA + numB;
+            PrintEquation(numA, numB, "+", sum);
         }
+        else if (IsEqualCaseInsensitive('S', userChoice))
+        {
+            var difference = numA - numB;
+            PrintEquation(numA, numB, "-", difference);
+        }
+        else if (IsEqualCaseInsensitive('M', userChoice))
+        {
+            var product = numA * numB;
+            PrintEquation(numA, numB, "*", product);
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice!");
+        }
+    }
+
+    private static bool IsEqualCaseInsensitive(char a, char b)
+    {
+        return char.Equals(a, char.ToUpper(b));
     }
 
     private static void PrintEquation(int numA, int numB, string @operator, int result)
