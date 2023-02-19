@@ -62,4 +62,10 @@
 
         return sum;
     }
+
+    // String interpolation - Format date
+    public static string FormatDate(int year, int month, int day)
+    {
+        return $"{year}/{month}/{day}";
+    }
 }
