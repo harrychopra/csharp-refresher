@@ -94,4 +94,19 @@
         return message;
     }
 
+    // While loop
+    public static int CalculateSumOfNumbersBetween(int firstNumber, int lastNumber)
+    {
+        int sum = 0;
+        int currentNumber = firstNumber;
+
+        while (currentNumber <= lastNumber)
+        {
+            sum += currentNumber;
+            currentNumber++;
+        }
+
+        return sum;
+    }
+
 }
