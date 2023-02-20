@@ -68,4 +68,30 @@
     {
         return $"{year}/{month}/{day}";
     }
+
+    // Switch statement 
+    public static string DescribeDay(int dayNumber)
+    {
+        string message;
+
+        switch (dayNumber)
+        {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                message = "Working day";
+                break;
+            case 6:
+            case 7:
+                message = "Weekend";
+                break;
+            default:
+                message = "Invalid day number";
+                break;
+        }
+        return message;
+    }
+
 }
