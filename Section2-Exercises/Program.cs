@@ -124,4 +124,19 @@
         return result;
     }
 
+    // Arrays
+    public static string BuildHelloString()
+    {
+        var letters = new[] { 'H', 'e', 'l', 'l', 'o' };
+
+        var result = "";
+
+        foreach (char letter in letters)
+        {
+            result += letter;
+        }
+
+        return result;
+    }
+
 }
