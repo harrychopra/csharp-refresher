@@ -150,4 +150,28 @@
         return false;
     }
 
+    // Multi dimensional Arrays
+    public static int FindMax(int[,] numbers)
+    {
+        var len = numbers.GetLength(0);
+        if (len == 0) return -1;
+
+        var width = numbers.GetLength(1);
+        if (width == 0) return -1;
+
+        int maxVal = numbers[0, 0];
+
+        for (int i = 0; i < len; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                if (maxVal < numbers[i, j])
+                {
+                    maxVal = numbers[i, j];
+                }
+            }
+        }
+
+        return maxVal;
+    }
 }
