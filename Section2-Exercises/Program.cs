@@ -139,4 +139,15 @@
         return result;
     }
 
+    // More Arrays
+    public static bool isWordPresentInCollection(string[] words, string wordToBeChecked)
+    {
+        foreach (string word in words)
+        {
+            if (wordToBeChecked.Equals(word)) return true;
+        }
+
+        return false;
+    }
+
 }
