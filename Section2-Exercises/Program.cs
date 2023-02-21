@@ -109,4 +109,19 @@
         return sum;
     }
 
+
+    // Do while loop
+    public static string RepeatCharacter(char character, int targetLength)
+    {
+        string result = "";
+
+        do
+        {
+            result += character;
+        }
+        while (result.Length < targetLength);
+
+        return result;
+    }
+
 }
