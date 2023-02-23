@@ -1,8 +1,9 @@
-﻿var words = new List<string> { "one", "two"};
+﻿// --- Lists ----
+var words = new List<string> { "one", "two" };
 
-Console.WriteLine("The length of words is: "+words.Count);
+Console.WriteLine("The length of words is: " + words.Count);
 
-foreach(var word in words)
+foreach (var word in words)
 {
     Console.WriteLine(word);
 }
@@ -24,3 +25,30 @@ Console.WriteLine(hasWordFour);
 
 words.Clear();
 Console.WriteLine(words.Count);
+
+// --- Out Keyword ----
+
+var numbers = new[] { 10, -8, 2, 12, -17 };
+
+var positiveNumbers = GetOnlyPositive(numbers, out int negativeNumberCount);
+
+foreach(var number in positiveNumbers)
+{
+    Console.WriteLine(number);
+}
+
+Console.WriteLine("The count of negative numbers: "+negativeNumberCount);
+
+List<int> GetOnlyPositive(int[] numbers, out int nonPositiveCount)
+{
+    var positiveNumbers = new List<int>();
+
+    foreach(var number in numbers)
+    {
+        if (number > 0) positiveNumbers.Add(number);
+    }
+
+    nonPositiveCount = numbers.Length - positiveNumbers.Count;
+
+    return positiveNumbers;
+}
