@@ -26,7 +26,7 @@ Console.WriteLine(hasWordFour);
 words.Clear();
 Console.WriteLine(words.Count);
 
-// --- Out Keyword ----
+// --- out Keyword ----
 
 var numbers = new[] { 10, -8, 2, 12, -17 };
 
@@ -52,3 +52,25 @@ List<int> GetOnlyPositive(int[] numbers, out int nonPositiveCount)
 
     return positiveNumbers;
 }
+
+// --- Try Parse ---
+
+bool isValidInteger;
+
+do
+{
+    Console.WriteLine("Enter a number:");
+    var userInput = Console.ReadLine();
+
+    isValidInteger = int.TryParse(userInput, out int number);
+
+    if (isValidInteger)
+    {
+        Console.WriteLine($"{number} is a valid integer");
+    }
+    else
+    {
+        Console.WriteLine($"{userInput} is not a valid integer. Try again!");
+    }
+}
+while (!isValidInteger);
